@@ -16,7 +16,7 @@ do
 #echo $index
 id=`echo $src/$i | awk -F "|" '{print $1}'`
 filename=`echo $src/$i | awk -F "|" '{print $NF}'`
-#echo $filename
+echo $filename
 mv $filename $src/$name$index.jpg
 ((index=index+1))
 done

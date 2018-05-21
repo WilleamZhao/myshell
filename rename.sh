@@ -6,7 +6,7 @@
 #提示"请输入前缀"
 read -p "请输入前缀:" name
 read -p "请输入路径:" src
-
+read -p "请输入后綴:" suff
 index=1
 
 for i in `ls $src`
@@ -17,6 +17,6 @@ do
 id=`echo $src/$i | awk -F "|" '{print $1}'`
 filename=`echo $src/$i | awk -F "|" '{print $NF}'`
 echo $filename
-mv $filename $src/$name$index.jpg
+mv $filename $src/$name$index.$suff
 ((index=index+1))
 done
